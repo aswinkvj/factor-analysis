@@ -18,7 +18,7 @@ class Noise():
         (tf.matmul(tf.transpose(self.factor.data), self.factor.data) - \
         tf.reduce_sum(tf.matmul(tf.matmul(self.factor.data, tf.transpose(self.posterior.posterior_mean)), tf.transpose(factor_)), axis=0) - \
         tf.reduce_sum(tf.matmul(tf.matmul(factor_, self.posterior.posterior_mean), tf.transpose(self.factor.data)), axis=1) + \
-        tf.reduce_sum(tf.matmul(tf.matmul(factor_, self.posterior.expectation_latent() + self.posterior.covariance_prior), 
+        tf.reduce_sum(tf.matmul(tf.matmul(factor_, self.posterior.expectation_latent()), 
         tf.transpose(factor_))))
         
         return tf.linalg.diag_part(self.noise)
