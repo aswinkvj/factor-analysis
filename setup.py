@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="factor-analysis",
-    version="0.0.1",
+    version="0.0.2",
     author="Aswin Vijayakumar",
     author_email="aswinkv28@gmail.com",
     description="Package to conduct factor analysis on data",
